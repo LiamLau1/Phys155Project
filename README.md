@@ -11,6 +11,7 @@ Mentoring project folder for understanding phase transitions
 - Minimal use of AI, limited to conceptual questions please.
 - I will do my best to be adaptable to your backgrounds and expectations for the project.
 - 5 hours of work per week
+- Please please comment your code with your thoughts
 
 ## Reading
 1. Motivation. Section 1.1 of David Tong's [Statistical Physics lecture notes](https://www.damtp.cam.ac.uk/user/tong/statphys/statphys.pdf)
