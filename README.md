@@ -29,7 +29,7 @@ Mentoring project folder for understanding phase transitions
 
 From what we discussed, the 1D Ising model is:
 ```math
-H = - J \sum_i^{N-1} \sigma_i \sigma_{i+1},
+\Huge H = - J \sum_i^{N-1} \sigma_i \sigma_{i+1},
 ```
 
 where we call $J$ the coupling constant, and we will care about $J > 0$ (Ferromagnetic), $i$ means sites, and the spin $\sigma_i$ can be $\uparrow$ (taking the value $+1$), or $\downarrow$ (taking the value $-1$).
