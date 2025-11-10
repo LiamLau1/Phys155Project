@@ -53,7 +53,7 @@ Imagine we want to measure the magnetization, which we've defined last time tell
 4. Before trying this part, let's discuss 2. first, so email me when you get here or need some help. Using your explict sum over configurations, find Z as a closed form expression of $J$ and $k_B T$. This is a little involved, have a go without chatgpt, and let's discuss it when I meet you guys separately.
 5. Imagine now you measure how correlated the spin on site $i$ is to the spin on site $i + j$. Ie. we want to measure the average alignement of two spins $\sigma_i$ and $\sigma_j$ that do not necessarily have to be neighbors. You could derive that,
 ```math
-\Huge \langle \sigma_i \sigma_{i+j} \rangle = [\tanh{\left(\frac{J}{k_B T}\right)}]^j
+\Huge \langle \sigma_i \sigma_{i+j} \rangle = \left[\tanh{\left(\frac{J}{k_B T}\right)}\right]^j
 ```
 
 
