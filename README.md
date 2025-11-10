@@ -43,7 +43,7 @@ where
 ```math
 \Huge Z = \sum_{\{\sigma\}} e^{-\frac{H[\{\sigma\}]}{k_B T}}
 ```
-is called the Partition function, and the sum over {$\sigma$} means the sum over all possible configurations. For example if we have two spins, there are 4 configurations. Could you show why $p$, above, has the properties of a probability (non negative, and also only takes values between 0 and 1, inclusive).
+is called the Partition function, and the sum over { $\sigma$ } means the sum over all possible configurations. For example if we have two spins, there are 4 configurations. Could you show why $p$, above, has the properties of a probability (non negative, and also only takes values between 0 and 1, inclusive).
 2. 
 3.
 
