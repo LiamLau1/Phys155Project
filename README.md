@@ -27,16 +27,23 @@ Mentoring project folder for understanding phase transitions
 - [x] Discussion on the week of November 10th about reading 1 and 2.
 - [] 1D Ising problem analytic calculation and exploring properties
 
-From what we discussed, the 1D Ising model is:
+From what we discussed, the 1D Ising model has a Hamiltonian (which really means energy):
 ```math
-\Huge H = - J \sum_i^{N-1} \sigma_i \sigma_{i+1},
+\Huge H[{\sigma}] = - J \sum_i^{N-1} \sigma_i \sigma_{i+1},
 ```
-
-where we call $J$ the coupling constant, and we will care about $J > 0$ (Ferromagnetic), $i$ means sites, and the spin $\sigma_i$ can be $\uparrow$ (taking the value $+1$), or $\downarrow$ (taking the value $-1$).
+where we call $J$ the coupling constant, and we will care about $J > 0$ (Ferromagnetic), $i$ means sites, and the spin $\sigma_i$ can be $\uparrow$ (taking the value $+1$), or $\downarrow$ (taking the value $-1$). Where the energy is a function of ${\sigma}$ which is a huge list of $+1$ and $-1$ which tells you the configuration of the spins on this 1D chain.
 
 Some questions for the 1D Ising problem:
 
-1. Just to recap what we've discussed. Could you describe t
+1. As we discussed on Monday 10th November, we never really know the actual configuration of our box of "stuff" (ie. how the spins look). Since we **don't know**, the configuration, we have to take a statistical approach. The probability distribution is given by,
+```math
+\Huge p(H[{\sigma}]) = \frac{e^{-\frac{H[{\sigma}]}{k_B T}}}{Z}
+```
+where
+```math
+\Huge Z = \sum_{{\sigma}} e^{-\frac{H[{\sigma}]}{k_B T}}
+```
+is called the Partition function, and the sum over ${\sigma}$ means the sum over all possible configurations. For example if we have two spins, there are 4 configurations. Could you show why $p$, above, has the properties of a probability (non negative, and also only takes values between 0 and 1, inclusive).
 2. 
 3.
 
