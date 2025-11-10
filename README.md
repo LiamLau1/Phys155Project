@@ -20,11 +20,21 @@ Mentoring project folder for understanding phase transitions
 ## Project Checklist
 ### Week of Monday 3rd November
 - [x] Pseudo code for percolation
-- [] Reading 1 and 2
-- [] Send Liam questions about 1 and 2
+- [x] Reading 1 and 2
+- [x] Send Liam questions about 1 and 2
 - [] Fill in code and produce successful throughput probability vs metallic probability
 ### Week of Monday 10th November
 - [] Discussion on the week of November 10th about reading 1 and 2.
+- [] 1D Ising problem analytic calculation and exploring properties
+- [] Setup classical montecarlo for 1D problem
+### Week of Monday 17th November
+- [] Explore the 1D problem using classical montecarlo
+- [] Develop elevator pitch about your project
+- [] Expand your code to 2D
+
+### Week of Monday 24th November
+- [] Introduction slides for your presentation
+- [] 2D properties (magnetization, and correlations)
 
 
 ## Contact
