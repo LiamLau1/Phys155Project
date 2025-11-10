@@ -31,7 +31,7 @@ From what we discussed, the 1D Ising model has a Hamiltonian (which really means
 ```math
 \Huge H[\{\sigma\}] = - J \sum_i^{N-1} \sigma_i \sigma_{i+1},
 ```
-where we call $J$ the coupling constant, and we will care about $J > 0$ (Ferromagnetic), $i$ means sites, and the spin $\sigma_i$ can be $\uparrow$ (taking the value $+1$), or $\downarrow$ (taking the value $-1$). Where the energy is a function of $\{$ $\sigma$ $\}$ which is a huge list of $+1$ and $-1$ which tells you the configuration of the spins on this 1D chain.
+where we call $J$ the coupling constant, and we will care about $J > 0$ (Ferromagnetic), $i$ means sites, and the spin $\sigma_i$ can be $\uparrow$ (taking the value $+1$), or $\downarrow$ (taking the value $-1$). Where the energy is a function of ${$ $\sigma$ $}$ which is a huge list of $+1$ and $-1$ which tells you the configuration of the spins on this 1D chain.
 
 Some questions for the 1D Ising problem:
 
