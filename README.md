@@ -22,12 +22,26 @@ Mentoring project folder for understanding phase transitions
 - [x] Pseudo code for percolation
 - [x] Reading 1 and 2
 - [x] Send Liam questions about 1 and 2
-- [] Fill in code and produce successful throughput probability vs metallic probability
+- [x] Fill in code and produce successful throughput probability vs metallic probability
 ### Week of Monday 10th November
-- [] Discussion on the week of November 10th about reading 1 and 2.
+- [x] Discussion on the week of November 10th about reading 1 and 2.
 - [] 1D Ising problem analytic calculation and exploring properties
-- [] Setup classical montecarlo for 1D problem
+
+From what we discussed, the 1D Ising model is:
+
+$$ H = - J \sum_i^{N-1} \sigma_i \sigma_{i+1}$$,
+
+where we call $J$ the coupling constant, and we will care about $J > 0$ (Ferromagnetic), $i$ means sites, and the spin $\sigma_i$ can be $\uparrow$ (taking the value $+1$), or $\downarrow$ (taking the value $-1$).
+
+Some questions for the 1D Ising problem:
+
+1. Just to recap what we've discussed. Could you describe t
+2. 
+3.
+
+
 ### Week of Monday 17th November
+- [] Setup classical montecarlo for 1D problem
 - [] Explore the 1D problem using classical montecarlo
 - [] Develop elevator pitch about your project
 - [] Expand your code to 2D
