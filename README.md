@@ -29,9 +29,9 @@ Mentoring project folder for understanding phase transitions
 
 From what we discussed, the 1D Ising model has a Hamiltonian (which really means energy):
 ```math
-\Huge H[\{\sigma\}] = - J \sum_i^{N-1} \sigma_i \sigma_{i+1},
+\Huge H[\{\sigma\}] = - J \sum_i^{L-1} \sigma_i \sigma_{i+1},
 ```
-where we call $J$ the coupling constant, and we will care about $J > 0$ (Ferromagnetic), $i$ means sites, and the spin $\sigma_i$ can be $\uparrow$ (taking the value $+1$), or $\downarrow$ (taking the value $-1$). Where the energy is a function of { $\sigma$ } which is a huge list of $+1$ and $-1$ which tells you the configuration of the spins on this 1D chain.
+where we call $J$ the coupling constant, $L$ is the length of the chain (number of lattice sites), and we will care about $J > 0$ (Ferromagnetic), $i$ means sites, and the spin $\sigma_i$ can be $\uparrow$ (taking the value $+1$), or $\downarrow$ (taking the value $-1$). Where the energy is a function of { $\sigma$ } which is a huge list of $+1$ and $-1$ which tells you the configuration of the spins on this 1D chain.
 
 Some questions for the 1D Ising problem:
 
@@ -44,8 +44,20 @@ where
 \Huge Z = \sum_{\{\sigma\}} e^{-\frac{H[\{\sigma\}]}{k_B T}}
 ```
 is called the Partition function, and the sum over { $\sigma$ } means the sum over all possible configurations. For example if we have two spins, there are 4 configurations. Could you show why $p$, above, has the properties of a probability (non negative, and also only takes values between 0 and 1, inclusive).
-2. 
-3.
+Imagine we want to measure the magnetization, which we've defined last time tells us how ordered the state is,
+```math
+\Huge m = \frac{1}{L} \langle \sum_i^L \sigma_i \rangle
+```
+2. Could you write what the sum over the configurations explicitly means? Hint: think about what each spin value can take.
+3. If we just took one state (ie. forget the expectation value of the moment), what is the $m$ value for the ferromagnetic state (all up or all down), and what is the $m$ value for the antiferromagnetic state (alternating up and down). What about some random configuration in between?
+4. Before trying this part, let's discuss 2. first, so email me when you get here or need some help. Using your explict sum over configurations, find Z as a closed form expression of $J$ and $k_B T$. This is a little involved, have a go without chatgpt, and let's discuss it when I meet you guys separately.
+5. Imagine now you measure how correlated the spin on site $i$ is to the spin on site $i + j$. Ie. we want to measure the average alignement of two spins $\sigma_i$ and $\sigma_j$ that do not necessarily have to be neighbors. You could derive that,
+```math
+\Huge \langle \sigma_i \sigma_{i+j} \rangle = [\tanh{\left(\frac{J}{k_B T}\right)}]^j
+```
+
+
+
 
 
 ### Week of Monday 17th November
