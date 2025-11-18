@@ -25,7 +25,7 @@ Mentoring project folder for understanding phase transitions
 - [x] Fill in code and produce successful throughput probability vs metallic probability
 ### Week of Monday 10th November
 - [x] Discussion on the week of November 10th about reading 1 and 2.
-- [] 1D Ising problem analytic calculation and exploring properties
+- [x] 1D Ising problem analytic calculation and exploring properties
 
 From what we discussed, the 1D Ising model has a Hamiltonian (which really means energy):
 ```math
@@ -63,6 +63,7 @@ What happens to this average correlation value when you make $j$ big?
 
 ### Week of Monday 17th November
 - [] Setup classical montecarlo for 1D problem
+You might find [this useful to get going with the algorithm](https://phys.libretexts.org/Bookshelves/Mathematical_Physics_and_Pedagogy/Computational_Physics_(Chong)/13%3A_The_Markov_Chain_Monte_Carlo_Method/13.02%3A_The_Ising_Model)
 - [] Explore the 1D problem using classical montecarlo
 - [] Develop elevator pitch about your project
 - [] Expand your code to 2D
