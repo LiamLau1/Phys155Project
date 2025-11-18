@@ -86,15 +86,15 @@ So let me point out a few things that you might want to investigate (you can do 
 
 Why is it important to calculate physical things about the system, for example magnetization, or other correlations, when the system is in equilibrium?
 
-2. Quantify how the total magnetization $ M $ (or you could you the magnetization per spin $ m $ by dividing the total magnetization by the number of sites, I would recommend this, and use small $m$ for everythin instead of large $M$) fluctuates with “time” when the system is in equilibrium.  
-The autocovariance of the magnetization $ M(t) $ for a time lag $ \tau $ is given by
+2. Quantify how the total magnetization $M$ (or you could you the magnetization per spin $m$ by dividing the total magnetization by the number of sites, I would recommend this, and use small $m$ for everythin instead of large $M$) fluctuates with “time” when the system is in equilibrium.  
+The autocovariance of the magnetization $M(t)$ for a time lag $\tau$ is given by
 
 ```math
 A(\tau) = \langle M'(t)\, M'(t+\tau) \rangle ,
 ```
 
-where $ \langle \cdot \rangle $ denotes averaging over a “long” time (ie. it's a running average over our samples that is constantly being updated by the metropolis algorithm and this average is for some long enough "time", ie. enough "time steps") and  
-$ M' = M - \langle M \rangle $ is the deviation from the mean.
+where $\langle \cdot \rangle$ denotes averaging over a “long” time (ie. it's a running average over our samples that is constantly being updated by the metropolis algorithm and this average is for some long enough "time", ie. enough "time steps") and  
+$M' = M - \langle M \rangle$ is the deviation from the mean.
 
 The autocorrelation is
 
@@ -102,7 +102,7 @@ The autocorrelation is
 a(\tau) = \frac{A(\tau)}{A(0)}.
 ```
 
-Determine the “decorrelation time”: the time lag $\tau_e$ over which the autocorrelation falls to $ 1/e $ at different temperatures, especially near the critical temperature $ T_c $ (once you find it using other methods that we will outline below, or you can use Onsager's analytical solution for the infinite lattice $T_c(\infty) = 2/\ln{(1+ \sqrt{2})}$, but I would recommend you wait).
+Determine the “decorrelation time”: the time lag $\tau_e$ over which the autocorrelation falls to $1/e$ at different temperatures, especially near the critical temperature $T_c$ (once you find it using other methods that we will outline below, or you can use Onsager's analytical solution for the infinite lattice $T_c(\infty) = 2/\ln{(1+ \sqrt{2})}$, but I would recommend you wait).
 
 Plot graphs of the decorrelation time versus the temperature for two different lattice sizes $ N $, and consider how this impacts the averaging time needed to get accurate values in the other investigations.
 
