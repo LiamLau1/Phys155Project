@@ -1,5 +1,5 @@
 # Phys155Project
-Mentoring project folder for understanding phase transitions
+Mentoring project folder for understanding phase transitions. Inspired by computational physics project at Cambridge part II.
 
 ## Goal of the project
 - Main goal is to get a feel for what phase transitions are and why they are so generally applicable. Hopefully you'll get a taste of physics, particular statistical mechanics, and get interested in research.
@@ -57,20 +57,73 @@ Imagine we want to measure the magnetization, which we've defined last time tell
 ```
 What happens to this average correlation value when you make $j$ big?
 
-
-
-
-
 ### Week of Monday 17th November
+- [] Develop elevator pitch about your project (This is the most important thing this week)
 - [] Setup classical montecarlo for 1D problem
 You might find [this useful to get going with the algorithm](https://phys.libretexts.org/Bookshelves/Mathematical_Physics_and_Pedagogy/Computational_Physics_(Chong)/13%3A_The_Markov_Chain_Monte_Carlo_Method/13.02%3A_The_Ising_Model)
+
+I will describe the algorithm for the 2D case, and you can generalize this down to the 1D case. Suppose we have a square lattice of $N$ by $N$ lattice points, for a total of $N^2$ sites. The energy of the system is given by,
+```math
+\Huge H[\{\sigma\}] = - J \sum_{\langle i j \rangle} \sigma_i \sigma_{j},
+```
+where the sum $\langle i j \rangle$ is over nearest neighbor pairs of atoms only. In 2D we thus have 4 nearest neighbor interactions. $J$ is the exchange energy. It is useful to use periodic boundary conditions (as we described in our meeting this week), so that every spin has four neighbors.
+
+Starting from some initial set of spin orientations, perhaps a random or uniform set (I suggest you start with a ferromagnetic state to begin with), the model is evolved in time by a Monte‑Carlo technique: pick a spin, and calculate the energy $\Delta E$ required to flip it. If $\Delta E < 0 $, flip the spin; if $\exp{(−\Delta E/T)} > p $, where $p$ is a random number drawn from a uniform distribution in the range $[0, 1]$, then flip the spin; else do nothing.
+
+We now repeat this step for many lattice sites. One can either step systematically through the lattice doing $N^2$ possible flips, or pick $N^2$ random points. You can think of these $N^2$ operations together as a single time step.
+
+Now repeat many steps to evolve the spin system, sampling relevant quantities and averaging them. The physical goal is to measure the thermodynamic and magnetic properties of the system as a function of time and as a function of the temperature (and magnetic field, if we have time).
+
+You will find it easiest to measure $T$ in units of $J$ (where we have set $k_B = 1$ for convenience). Let's now explore what physics this model has, and see if this is what we see in the real world!
+
 - [] Explore the 1D problem using classical montecarlo
-- [] Develop elevator pitch about your project
 - [] Expand your code to 2D
+- [] Explore 2D properties (magnetization, and correlations, etc.)
+
+So let me point out a few things that you might want to investigate (you can do a WHOLE lot more, and I want to leave this to your discretion of what you want to investigate).
+
+1. Try to quantify how long (ie. the number of montecarlo whole "time steps") it takes to get from your initial configuration (I recommend an ordered state to begin with, then you can explore after), to a state which appears to be in thermal equilibrium (ie. as you generate new samples from each montecarlo time step, it "looks" basically the same). Hint: how can we quantify "looks" the same? Maybe you can calculate something here and see if that changes? Try this for a range of different temperatures. This amount of time to reach equilibrium is called the thermalization time, or the burn-in time.
+
+Why is it important to calculate physical things about the system, for example magnetization, or other correlations, when the system is in equilibrium?
+
+2. Quantify how the total magnetization \( M \) (or you could you the magnetization per spin \( m \) by dividing the total magnetization by the number of sites, I would recommend this, and use small $m$ for everythin instead of large $M$) fluctuates with “time” when the system is in equilibrium.  
+The autocovariance of the magnetization \( M(t) \) for a time lag \( \tau \) is given by
+
+\[
+A(\tau) = \langle M'(t)\, M'(t+\tau) \rangle ,
+\]
+
+where \( \langle \cdot \rangle \) denotes averaging over a “long” time (ie. it's a running average over our samples that is constantly being updated by the metropolis algorithm and this average is for some long enough "time", ie. enough "time steps") and  
+\( M' = M - \langle M \rangle \) is the deviation from the mean.
+
+The autocorrelation is
+
+\[
+a(\tau) = \frac{A(\tau)}{A(0)}.
+\]
+
+Determine the “decorrelation time”: the time lag \( \tau_e \) over which the autocorrelation falls to \( 1/e \) at different temperatures, especially near the critical temperature \( T_c \) (once you find it using other methods that we will outline below, or you can use Onsager's analytical solution for the infinite lattice $T_c(\infty) = 2/\ln{(1+ \sqrt{2})}$, but I would recommend you wait).
+
+Plot graphs of the decorrelation time versus the temperature for two different lattice sizes \( N \), and consider how this impacts the averaging time needed to get accurate values in the other investigations.
+
+3. Determine how the time averaged magnetization $\langle |m| \rangle$ varies with temperature, we use the absolute value to make sure we don't get cancellations if we motecarlo explore for a long time. Can you make an estimate of $T_c$?
+
+4. Measure the heat capacity of the system as a function of temperature (google what this is and try to interpret it physically). We separately know that the heat capacity can be calculated using the fluctuations of the energy $H$.
+```math
+C_v = \frac{\langle E^2 \rangle - \langle E \rangle^2}{N^2 T^2}
+```
+Plot this as a function of temperature $T$. What happens around your estimate of $T_c$ to the heat capacity? Maybe this feature will actually be a better estimate for $T_c$ than your magnetization plot?
+
+5. Compare your $T_c(N)$, which is dependent on the lattice size $N$, to the Onsager analytical result for the infinite lattice $T_c(\infty) = 2/\ln{(1+ \sqrt{2})}$. Investigate "finite size scaling", which suggests the critical temperature $T_c(N)$ for a lattice of size $N$ (remember your lattice is $N^2$ total size) varies as,
+```math
+T_c(N) = T_c(\infty) + a N^{-1/ \nu}
+```
+where $a$ and $\nu$ are constants. Try and see if your data fits this result (do not use the value of $T_c(\infty)$, but see if you can estimate it from your data). Can you quantify your uncertainties? 
+
 
 ### Week of Monday 24th November
 - [] Introduction slides for your presentation
-- [] 2D properties (magnetization, and correlations)
+- [] Continuation of exploring 2D properties (magnetization, and correlations, etc.)
 
 
 ## Contact
