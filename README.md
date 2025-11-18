@@ -104,7 +104,7 @@ a(\tau) = \frac{A(\tau)}{A(0)}.
 
 Determine the “decorrelation time”: the time lag $\tau_e$ over which the autocorrelation falls to $1/e$ at different temperatures, especially near the critical temperature $T_c$ (once you find it using other methods that we will outline below, or you can use Onsager's analytical solution for the infinite lattice $T_c(\infty) = 2/\ln{(1+ \sqrt{2})}$, but I would recommend you wait).
 
-Plot graphs of the decorrelation time versus the temperature for two different lattice sizes $ N $, and consider how this impacts the averaging time needed to get accurate values in the other investigations.
+Plot graphs of the decorrelation time versus the temperature for two different lattice sizes $N$, and consider how this impacts the averaging time needed to get accurate values in the other investigations.
 
 3. Determine how the time averaged magnetization $\langle |m| \rangle$ varies with temperature, we use the absolute value to make sure we don't get cancellations if we motecarlo explore for a long time. Can you make an estimate of $T_c$?
 
